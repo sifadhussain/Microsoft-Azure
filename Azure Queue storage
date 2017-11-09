@@ -13,8 +13,8 @@ namespace ConsoleApplication1
         static void Main(string[] args)
         {
 
-            String accountname = "fileserverp";
-            String accountkey = "ZUHtcEx6boQtVj8TfYr83F9MkXsS23Yi9lgKmFnYrPdjGxadts45RkJPZLb0IzikrPlxEeJIwjz+PUrkN1KDbw==";
+            String accountname = "Storage Account UserName";
+            String accountkey = "straogeaccountkey";
             String msg = "";
             try
             {
