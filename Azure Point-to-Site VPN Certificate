@@ -1,0 +1,2 @@
+makecert -sky exchange -r -n "CN=MyVNet" -pe -a sha1 -len 2048 -ss My
+makecert -n "CN=MyVNetClient" -pe -sky exchange -m 96 -ss My -in "MyNet" -is my -a sha1
