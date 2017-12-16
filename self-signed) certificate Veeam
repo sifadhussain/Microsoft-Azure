@@ -1,0 +1,5 @@
+$Cert = New-SelfSignedCertificate -CertstoreLocation Cert:\LocalMachine\My -DnsName "helptechsl.eastus.cloudapp.azure.com"
+Export-Certificate -Cert $Cert -FilePath C:\temp\cert
+Enable-PSRemoting -SkipNetworkProfileCheck –Force
+New-Item -Path WSMan:\LocalHost\Listener -Transport HTTPS -Address * -CertificateThumbPrint $Cert.Thumbprint –Force
+New-NetFirewallRule -DisplayName "Windows Remote Management (HTTPS-In)" -Name "Windows Remote Management (HTTPS-In)" -Profile Any -LocalPort 5986 -Protocol TCP
